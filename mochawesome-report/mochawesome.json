@@ -1,0 +1,446 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-25T16:44:38.948Z",
+    "end": "2023-06-25T16:44:43.663Z",
+    "duration": 4715,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c1c6230c-82fb-4d43-934c-840042cf0c1e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 714,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    accessToken = await login();\n    } catch (error) {\n        throw error;\n    }",
+          "err": {},
+          "uuid": "62b5cad5-cdbd-44e2-91f3-37653c230917",
+          "parentUUID": "c1c6230c-82fb-4d43-934c-840042cf0c1e",
+          "isHook": true,
+          "skipped": false
+        },
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 1068,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    accessToken = await login();\n    unitId = await unittIdd();\n    } catch (error) {\n        throw error;\n    }",
+          "err": {},
+          "uuid": "95b96c91-45e3-4753-a064-9cbb02757c34",
+          "parentUUID": "c1c6230c-82fb-4d43-934c-840042cf0c1e",
+          "isHook": true,
+          "skipped": false
+        },
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 447,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    accessToken = await login();\n    } catch (error) {\n        throw error;\n    }",
+          "err": {},
+          "uuid": "b70eaa33-14d9-4f0b-94ad-1550faab25b8",
+          "parentUUID": "c1c6230c-82fb-4d43-934c-840042cf0c1e",
+          "isHook": true,
+          "skipped": false
+        },
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 1117,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    accessToken = await login();\n    unitId = await unittIdd();\n    } catch (error) {\n        throw error;\n    }",
+          "err": {},
+          "uuid": "a1c2417f-d76b-48ae-a929-6c0fe85f60c0",
+          "parentUUID": "c1c6230c-82fb-4d43-934c-840042cf0c1e",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c40687e7-bec6-4aff-a026-5e7e21ca63b8",
+          "title": "POST /units Positive",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\addUnit.spec.js",
+          "file": "\\test\\spec\\unit\\addUnit.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Unit with valid accessToken",
+              "fullTitle": "POST /units Positive Add Unit with valid accessToken",
+              "timedOut": false,
+              "duration": 142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addUnit = {\n    \"name\": 'kilogram',\n    \"description\": 'satuannya adalah kilogram',\n};\nconst response = await request\n                .post('/units')\n                .set('Authorization', `Bearer ${accessToken}`)\n                .send(addUnit);\n  \nconsole.log(await response.body)\nexpect(await response.statusCode).to.eql(201);\nexpect(await response.body.status).to.equal(\"success\");\nexpect(await response.body.data.name).to.eql(\"kilogram\");\nunitId = await response.body.data.unitId;\n//console.log(response);",
+              "err": {},
+              "uuid": "32c19375-4f87-4ca8-b0b4-31f069ec4328",
+              "parentUUID": "c40687e7-bec6-4aff-a026-5e7e21ca63b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32c19375-4f87-4ca8-b0b4-31f069ec4328"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2a20f072-75f6-4956-b2dd-65b0a38d4b66",
+          "title": "POST /units Negative",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\addUnit.spec.js",
+          "file": "\\test\\spec\\unit\\addUnit.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Unit with invalid accessToken",
+              "fullTitle": "POST /units Negative Add Unit with invalid accessToken",
+              "timedOut": false,
+              "duration": 162,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addUnit = {\n    \"name\": 'kilogram',\n    \"description\": 'satuannya adalah kilogram',\n};\nconst response = await request\n                .post('/units')\n                .send(addUnit);\nconsole.log(await response.body)\nexpect((await response).status).to.equal(401);\nexpect((await response).body.error).to.equal(\"Unauthorized\");",
+              "err": {},
+              "uuid": "8ce9aacd-c7aa-42f7-9dd9-a4acad414f26",
+              "parentUUID": "2a20f072-75f6-4956-b2dd-65b0a38d4b66",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ce9aacd-c7aa-42f7-9dd9-a4acad414f26"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6b9a760d-5ff6-4ab8-922e-c349e52abe27",
+          "title": "GET /units/{unitId} Positive",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\getUnitDetail.spec.js",
+          "file": "\\test\\spec\\unit\\getUnitDetail.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Unit Detail with valid data",
+              "fullTitle": "GET /units/{unitId} Positive Get Unit Detail with valid data",
+              "timedOut": false,
+              "duration": 160,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n                .get(`/units/${unitId}`)\n                .set('Authorization', `Bearer ${accessToken}`);\nconsole.log(await response.body);\nexpect(await response.status).to.equal(200);\nexpect(await response.body.data.unit.name).to.eql(\"kilogram\");\nexpect(await response.body.data.unit.description).to.include(\"satuannya adalah kilogram\");",
+              "err": {},
+              "uuid": "32d2e048-b05f-4fc8-bb44-93e8a546b426",
+              "parentUUID": "6b9a760d-5ff6-4ab8-922e-c349e52abe27",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32d2e048-b05f-4fc8-bb44-93e8a546b426"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 160,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2d0e7856-deb8-4755-965a-6c832edbfffe",
+          "title": "GET /units/{unitId} Negative",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\getUnitDetail.spec.js",
+          "file": "\\test\\spec\\unit\\getUnitDetail.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Nama tidak sesuai",
+              "fullTitle": "GET /units/{unitId} Negative Nama tidak sesuai",
+              "timedOut": false,
+              "duration": 151,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n                .get(`/units/xx`)\n                .set('Authorization', `Bearer ${accessToken}`);\n    console.log((await response).body)\n    expect((await response).status).to.equal(404);     \n    expect((await response).body.status).to.equal(\"fail\");\n    expect((await response).body.message).to.equal(\"id tidak valid\");",
+              "err": {},
+              "uuid": "214378f5-bea0-4efd-abc7-4743a85895a8",
+              "parentUUID": "2d0e7856-deb8-4755-965a-6c832edbfffe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "214378f5-bea0-4efd-abc7-4743a85895a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 151,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d9bc4f49-b17e-4e39-985c-4940a760109b",
+          "title": "GET /units Positive",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\getUnitList.spec.js",
+          "file": "\\test\\spec\\unit\\getUnitList.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Unit List with valid data",
+              "fullTitle": "GET /units Positive Get Unit List with valid data",
+              "timedOut": false,
+              "duration": 206,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n                .get('/units')\n                .set('Authorization', `Bearer ${accessToken}`);\nconsole.log(await response.body);\nexpect(await response.status).to.equal(200);\nexpect(await response.body.status).to.eql(\"success\");\n//expect(await response.body.data.unit.description).to.include(\"satuannya adalah kilogram\");",
+              "err": {},
+              "uuid": "8edd8588-9794-428a-ba0f-ba7befc9fb53",
+              "parentUUID": "d9bc4f49-b17e-4e39-985c-4940a760109b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8edd8588-9794-428a-ba0f-ba7befc9fb53"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7521cd4e-709a-42a4-88ff-8ceb05186d33",
+          "title": "GET /units Negative",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\getUnitList.spec.js",
+          "file": "\\test\\spec\\unit\\getUnitList.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Unit List without Access Token",
+              "fullTitle": "GET /units Negative Get Unit List without Access Token",
+              "timedOut": false,
+              "duration": 162,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n                .get(`/units/xx`)\n    console.log((await response).body)\n    expect((await response).status).to.equal(401);     \n    expect((await response).body.message).to.equal(\"Missing authentication\");",
+              "err": {},
+              "uuid": "a06078a6-b9f5-4418-813c-626115eeae65",
+              "parentUUID": "7521cd4e-709a-42a4-88ff-8ceb05186d33",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a06078a6-b9f5-4418-813c-626115eeae65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "086824ef-3bf4-4cce-85f4-b60e7a542b34",
+          "title": "put /units/{unitId} Positive",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\updateUnit.spec.js",
+          "file": "\\test\\spec\\unit\\updateUnit.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update Unit with valid data",
+              "fullTitle": "put /units/{unitId} Positive Update Unit with valid data",
+              "timedOut": false,
+              "duration": 176,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addUnit = {\n    \"name\": 'newton',\n    \"description\": 'satuannya adalah newton (N)',\n};\nconst response = await request\n                .put(`/units/${unitId}`)\n                .set('Authorization', `Bearer ${accessToken}`)\n                .send(addUnit);\nconsole.log(await response.body);\nexpect(await response.status).to.equal(200);\nexpect(await response.body.status).to.eql(\"success\");\n//expect(await response.body.data.unit.description).to.include(\"satuannya adalah newton (N)\");",
+              "err": {},
+              "uuid": "c93024bc-bb01-486f-8d04-af010ae7c22c",
+              "parentUUID": "086824ef-3bf4-4cce-85f4-b60e7a542b34",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c93024bc-bb01-486f-8d04-af010ae7c22c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c8f52997-0244-49d4-8c3c-bac08ec7310b",
+          "title": "put /units/{unitId} Negative",
+          "fullFile": "C:\\Users\\ASUS\\AutomationPractice\\Sanbercode\\Tugas Pekanan 4\\test\\spec\\unit\\updateUnit.spec.js",
+          "file": "\\test\\spec\\unit\\updateUnit.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update Unit Invalid Data",
+              "fullTitle": "put /units/{unitId} Negative Update Unit Invalid Data",
+              "timedOut": false,
+              "duration": 153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addUnit = {\n    \"name\": 'newton',\n    \"description\": 'satuannya adalah newton (N)',\n};\nconst response = await request\n                .put(`/units/xx`)\n                .set('Authorization', `Bearer ${accessToken}`)\n                .send(addUnit);\n    console.log((await response).body)\n    expect((await response).status).to.equal(404);     \n    expect((await response).body.status).to.equal(\"fail\");\n    expect((await response).body.message).to.equal(\"id tidak valid\");",
+              "err": {},
+              "uuid": "5f5d5b4e-a435-49c7-98ff-11893aeec212",
+              "parentUUID": "c8f52997-0244-49d4-8c3c-bac08ec7310b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f5d5b4e-a435-49c7-98ff-11893aeec212"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 153,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
