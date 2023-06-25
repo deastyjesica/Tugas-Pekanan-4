@@ -1,4 +1,4 @@
 # Tugas-Pekanan-4
 
-https://drive.google.com/drive/folders/1VKEMJxGQrIVqyoJojYFpcclym5RIDr63?usp=sharing
-![image](https://github.com/deastyjesica/Tugas-Pekanan-4/assets/72622621/e66a54ae-d2bd-4952-b47c-f5b07a9408d2)
+![xyz](https://github.com/deastyjesica/Tugas-Pekanan-4/assets/72622621/42e3619d-d7fc-49ed-948a-e0e31093e951)
+![xyz 1](https://github.com/deastyjesica/Tugas-Pekanan-4/assets/72622621/82a26f5b-a718-4b1d-90de-80a32f1612ab)
